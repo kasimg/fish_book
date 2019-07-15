@@ -13,6 +13,8 @@ class BookViewModel:
         setattr(self, 'price', book['price'])
         setattr(self, 'summary', book['summary'])
         setattr(self, 'image', book['image'])
+        setattr(self, 'pubdate', book['pubdate'])
+        setattr(self, 'binding', book['binding'])
         self.isbn = book['isbn']
         # self.title = book['title'],
         # self.publisher = book['publisher'],

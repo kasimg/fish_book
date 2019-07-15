@@ -7,7 +7,7 @@ from app.models.base import Base
 
 
 class Book(Base):  # 这里的继承类导致了类中的信息被获取
-    print(11)
+    # print(11)
     # print(db.Model.metadata.tables)
     """
     书本的数据模型

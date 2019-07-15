@@ -5,9 +5,14 @@ from sqlalchemy import Column, Integer, String, Boolean, Float
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from app import login_manager
+from app.libs.helper import is_isbn_or_key
 from app.models.base import Base
 
 from flask_login import UserMixin
+
+from app.models.gift import Gift
+from app.models.wish import Wish
+from app.spider.yushu_book import YuShuBook
 
 
 class User(UserMixin, Base):
@@ -35,6 +40,28 @@ class User(UserMixin, Base):
     def check_password(self, raw_password):
         return check_password_hash(self._password, raw_password)
 
+
+    def can_save_to_list(self, isbn):
+        """
+        放在这里可以提升复用性
+        :param isbn:
+        :return:
+        """
+        if is_isbn_or_key(isbn) != 'isbn': #  如果isbn号不合法，那么不允许存入
+            return False
+        yushu_book = YuShuBook()
+        yushu_book.search_by_isbn(isbn)
+        if not yushu_book.only_book: #  如果库中没有，那么无法添加到心愿清单
+            return False
+        #  书赠送出去之前，不允许添加同ISBN号的书
+        #  一个用户不可能同时是赠送者或者索要者
+        in_gift_list = Gift.query.filter_by(uid=self.id, isbn=isbn, launched=False).first()
+        in_wish_list = Wish.query.filter_by(uid=self.id, isbn=isbn, launched=False).first()
+
+        if not in_gift_list and not in_wish_list:
+            return True
+        else:
+            return False
     # def get_id(self):
     #     """
     #     和login_user配合使用，要用的话就必须定义这样的若干个固定函数
@@ -48,6 +75,8 @@ class User(UserMixin, Base):
 def get_user(uid):
     """
     和login_required装饰器配合使用
+    根据id把用户数据转化为user模型
+    和数据库配合使用
     :param uid:
     :return:
     """

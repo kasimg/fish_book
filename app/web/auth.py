@@ -29,7 +29,7 @@ def login():
         if user and user.check_password(form.password.data):
             login_user(user, remember=True) #  写入的是一次性cookie
             next = request.args.get('next')
-            if not next or not next.startwith('/'): #  如果next不是以/开头，为了防止重定向攻击，需要强行转向首页
+            if not next or not next.startswith('/'): #  如果next不是以/开头，为了防止重定向攻击，需要强行转向首页
                 next = url_for('web.index') #  如何找到首页？url_for后面跟的都是视图函数？
             return redirect(next) #  redirect需要return，否则不会跳转
         else:
