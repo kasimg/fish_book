@@ -29,7 +29,7 @@ db = SQLAlchemy(query_class=Query)  # 初始化db对象, app初始化时导出�
 class Base(db.Model):
     __abstract__ = True
     create_time = Column('create_time', Integer)
-    status = Column(SmallInteger)
+    status = Column(SmallInteger, default=1)
 
     def __init__(self):
         self.create_time = int(datetime.now().timestamp())

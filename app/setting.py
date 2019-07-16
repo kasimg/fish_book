@@ -5,3 +5,5 @@ Created by kasim on 2019/7/9 15:11
 PER_PAGE = 15 # 每页的记录数
 
 BEANS_UPLOAD_ONE_BOOK = 0.5
+
+RECENT_BOOK_COUNT = 30
