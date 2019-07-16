@@ -11,6 +11,7 @@ __author__ = '七月'
 
 
 @web.route('/my/wish')
+@login_required
 def my_wish():
     uid = current_user.id
     wishes = Wish.get_user_wishes(uid)

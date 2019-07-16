@@ -26,14 +26,14 @@ def create_app():
     register_buleprint(app)  # 下面定义的函数
 
     db.init_app(app)  # 初始化db对象中的app
-    db.create_all(app=app)
+    # db.create_all(app=app)
     login_manager.init_app(app)  # 注册插件的初始化工作
     login_manager.login_view = 'web.login'  # 指定如果登录失败的话向哪里跳转
     login_manager.login_message = '请登录后重试！'
     # db.create_all(app=app)  # 利用模型创建表
     mail.init_app(app)
-    # with app.app_context():
-    #     db.create_all()
+    with app.app_context():
+        db.create_all()
     return app
 
 
