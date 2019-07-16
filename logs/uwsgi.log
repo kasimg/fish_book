@@ -1,0 +1,376 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 20:17:57 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 3
+uwsgi socket 0 bound to UNIX address /root/kasim/fish_book/socket/config.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAER
+Python main interpreter initialized at 0xece020
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1003600 bytes (980 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added ~/kasim/fish_book to pythonpath.
+/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xece020 pid: 26830 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 26830)
+spawned uWSGI worker 1 (pid: 26833, cores: 2)
+spawned uWSGI worker 2 (pid: 26834, cores: 2)
+spawned uWSGI worker 3 (pid: 26835, cores: 2)
+spawned uWSGI worker 4 (pid: 26836, cores: 2)
+spawned uWSGI http 1 (pid: 26837)
+[pid: 26836|app: 0|req: 1/1] 101.88.131.222 () {38 vars in 872 bytes} [Tue Jul 16 20:18:21 2019] GET / => generated 3435 bytes in 55 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 26836|app: 0|req: 2/2] 101.88.131.222 () {40 vars in 931 bytes} [Tue Jul 16 20:18:33 2019] GET /my/gifts => generated 257 bytes in 3 msecs (HTTP/1.1 302) 5 headers in 460 bytes (1 switches on core 1)
+[pid: 26833|app: 0|req: 1/3] 101.88.131.222 () {40 vars in 1046 bytes} [Tue Jul 16 20:18:33 2019] GET /login?next=%2Fmy%2Fgifts => generated 3051 bytes in 53 msecs (HTTP/1.1 200) 4 headers in 311 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 26837)
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 20:36:40 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:5000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAER
+Python main interpreter initialized at 0x1164f40
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1003600 bytes (980 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added ~/kasim/fish_book to pythonpath.
+/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1164f40 pid: 28855 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 28855)
+spawned uWSGI worker 1 (pid: 28861, cores: 2)
+spawned uWSGI worker 2 (pid: 28862, cores: 2)
+spawned uWSGI worker 3 (pid: 28863, cores: 2)
+spawned uWSGI worker 4 (pid: 28864, cores: 2)
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 20:48:08 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/kasim/fish_book
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+!!! Python Home is not a directory: /root/.local/share/virtualenvs/fish_book-t_JyRAERwsgi] !!!
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAERwsgi]
+Fatal Python error: initfsencoding: Unable to get the locale encoding
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f31d32ae840 (most recent call first):
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 20:48:23 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/kasim/fish_book
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+!!! Python Home is not a directory: /root/.local/share/virtualenvs/fish_book-t_JyRAERwsgi] !!!
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAERwsgi]
+Fatal Python error: initfsencoding: Unable to get the locale encoding
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fbecc5b8840 (most recent call first):
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 21:14:47 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46010 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAER
+Python main interpreter initialized at 0x1c29080
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1003600 bytes (980 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/kasim/fish_book/ to pythonpath.
+/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1c29080 pid: 466 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 466)
+spawned uWSGI worker 1 (pid: 468, cores: 2)
+spawned uWSGI worker 2 (pid: 469, cores: 2)
+spawned uWSGI worker 3 (pid: 470, cores: 2)
+spawned uWSGI worker 4 (pid: 471, cores: 2)
+spawned uWSGI http 1 (pid: 472)
+[pid: 468|app: 0|req: 1/1] 101.88.131.222 () {38 vars in 872 bytes} [Tue Jul 16 21:14:59 2019] GET / => generated 3435 bytes in 66 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 472)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 21:15:43 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:5000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAER
+Python main interpreter initialized at 0x25c8f80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1003600 bytes (980 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/kasim/fish_book/ to pythonpath.
+/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x25c8f80 pid: 572 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 572)
+spawned uWSGI worker 1 (pid: 574, cores: 2)
+spawned uWSGI worker 2 (pid: 575, cores: 2)
+spawned uWSGI worker 3 (pid: 576, cores: 2)
+spawned uWSGI worker 4 (pid: 577, cores: 2)
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2441, in wsgi_app
+    ctx = self.request_context(environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2358, in request_context
+    return RequestContext(self, environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/ctx.py", line 292, in __init__
+    self.url_adapter = app.create_url_adapter(self.request)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2173, in create_url_adapter
+    subdomain=subdomain,
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/werkzeug/routing.py", line 1524, in bind_to_environ
+    environ["REQUEST_METHOD"],
+KeyError: 'REQUEST_METHOD'
+[pid: 574|app: 0|req: 1/1]  () {18 vars in 670 bytes} [Tue Jul 16 21:16:28 2019]   => generated 0 bytes in 9 msecs ( 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2441, in wsgi_app
+    ctx = self.request_context(environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2358, in request_context
+    return RequestContext(self, environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/ctx.py", line 292, in __init__
+    self.url_adapter = app.create_url_adapter(self.request)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2173, in create_url_adapter
+    subdomain=subdomain,
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/werkzeug/routing.py", line 1524, in bind_to_environ
+    environ["REQUEST_METHOD"],
+KeyError: 'REQUEST_METHOD'
+[pid: 574|app: 0|req: 2/2]  () {16 vars in 575 bytes} [Tue Jul 16 21:16:28 2019]   => generated 0 bytes in 5 msecs ( 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2441, in wsgi_app
+    ctx = self.request_context(environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2358, in request_context
+    return RequestContext(self, environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/ctx.py", line 292, in __init__
+    self.url_adapter = app.create_url_adapter(self.request)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2173, in create_url_adapter
+    subdomain=subdomain,
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/werkzeug/routing.py", line 1524, in bind_to_environ
+    environ["REQUEST_METHOD"],
+KeyError: 'REQUEST_METHOD'
+[pid: 574|app: 0|req: 3/3]  () {18 vars in 677 bytes} [Tue Jul 16 21:16:36 2019]   => generated 0 bytes in 3 msecs ( 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2463, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2441, in wsgi_app
+    ctx = self.request_context(environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2358, in request_context
+    return RequestContext(self, environ)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/ctx.py", line 292, in __init__
+    self.url_adapter = app.create_url_adapter(self.request)
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask/app.py", line 2173, in create_url_adapter
+    subdomain=subdomain,
+  File "/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/werkzeug/routing.py", line 1524, in bind_to_environ
+    environ["REQUEST_METHOD"],
+KeyError: 'REQUEST_METHOD'
+[pid: 577|app: 0|req: 1/4]  () {16 vars in 575 bytes} [Tue Jul 16 21:16:36 2019]   => generated 0 bytes in 6 msecs ( 500) 0 headers in 0 bytes (0 switches on core 0)
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 16 21:17:06 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 16 July 2019 11:07:58
+os: Linux-3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018
+nodename: VM_0_10_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/kasim/fish_book
+detected binary path: /root/.local/share/virtualenvs/fish_book-t_JyRAER/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37465 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.4 (default, Jul 15 2019, 10:05:04)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Set PythonHome to /root/.local/share/virtualenvs/fish_book-t_JyRAER
+Python main interpreter initialized at 0x1f51080
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1003600 bytes (980 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/kasim/fish_book/ to pythonpath.
+/root/.local/share/virtualenvs/fish_book-t_JyRAER/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1f51080 pid: 793 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 793)
+spawned uWSGI worker 1 (pid: 795, cores: 2)
+spawned uWSGI worker 2 (pid: 796, cores: 2)
+spawned uWSGI worker 3 (pid: 797, cores: 2)
+spawned uWSGI worker 4 (pid: 798, cores: 2)
+spawned uWSGI http 1 (pid: 799)
+[pid: 798|app: 0|req: 1/1] 101.88.131.222 () {40 vars in 903 bytes} [Tue Jul 16 21:17:09 2019] GET / => generated 3435 bytes in 57 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 798|app: 0|req: 2/2] 101.88.131.222 () {42 vars in 898 bytes} [Tue Jul 16 21:17:10 2019] GET /static/images/icon.png => generated 1749 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 8 headers in 293 bytes (0 switches on core 1)
+[pid: 798|app: 0|req: 3/3] 101.88.131.222 () {40 vars in 931 bytes} [Tue Jul 16 21:17:52 2019] GET /my/gifts => generated 257 bytes in 4 msecs (HTTP/1.1 302) 5 headers in 460 bytes (1 switches on core 1)
+[pid: 795|app: 0|req: 1/4] 101.88.131.222 () {40 vars in 1046 bytes} [Tue Jul 16 21:17:52 2019] GET /login?next=%2Fmy%2Fgifts => generated 3051 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 311 bytes (1 switches on core 0)
+[pid: 798|app: 0|req: 4/5] 101.88.131.222 () {38 vars in 872 bytes} [Tue Jul 16 21:17:56 2019] GET / => generated 3435 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 799)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
