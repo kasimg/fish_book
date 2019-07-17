@@ -36,14 +36,14 @@
     <div class="sub-nav flex-vertical-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-md-offset-1">
-                    <a id="recent" href="{{ url_for('web.index') }}"
-                       class="flex-vertical-hor-center">
-                        <img src="{{ url_for('static', filename='images/upload.png') }}"/>
-                        <span>最近上传</span>
-                    </a>
-                </div>
-                <div class="col-md-2">
+{#                <div class="col-md-2 col-md-offset-1">#}
+{#                    <a id="recent" href="{{ url_for('web.index') }}"#}
+{#                       class="flex-vertical-hor-center">#}
+{#                        <img src="{{ url_for('static', filename='images/upload.png') }}"/>#}
+{#                        <span>最近上传</span>#}
+{#                    </a>#}
+{#                </div>#}
+                <div class="col-md-2 col-md-offset-3">
                     <a id="gifts" href="{{ url_for('web.my_gifts') }}"
                        class="flex-vertical-hor-center">
                         <img src="{{ url_for('static', filename='images/gift.png') }}"/>

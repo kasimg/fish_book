@@ -6,10 +6,11 @@ class BookViewModel:
         # self.__cut_book_data(book)
         # self.title = ''
         # self.a = type(book['title'])
+        # self._author = ''
         setattr(self, 'title', book['title'])
         setattr(self, 'publisher', book['publisher'])
         setattr(self, 'pages', book['pages'])
-        setattr(self, 'author', book['author'])
+        setattr(self, '_author', book['author'])
         setattr(self, 'price', book['price'])
         setattr(self, 'summary', book['summary'])
         setattr(self, 'image', book['image'])
@@ -34,6 +35,10 @@ class BookViewModel:
     #     self.price = book['price'],
     #     self.summary = book['summary'] or '',
     #     self.image = book['image']
+    @property
+    def author(self):
+        return '  '.join(self._author)
+
     @property
     def intro(self):
         intros = filter(lambda x: True if x else False,
