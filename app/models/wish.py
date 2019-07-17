@@ -5,7 +5,7 @@ from sqlalchemy import Column, Integer, ForeignKey, Boolean, String, desc, func
 from sqlalchemy.orm import relationship
 
 from app.models.base import Base, db
-
+from app.spider.yushu_book import YuShuBook
 
 
 class Wish(Base):
@@ -45,6 +45,11 @@ class Wish(Base):
         # [dict(isbn=record[0], count=record[1]) for record in count_list]
         return [dict(isbn=record[0], count=record[1]) for record in count_list]
 
+    @property
+    def book(self):
+        yushu_book = YuShuBook()
+        yushu_book.search_by_isbn(self.isbn)
+        return yushu_book.only_book
 # 此模块第一次被执行时，类对象被初始化，初始化过程只涉及类变量
 # 只要类变量的定义过程中没有使用Gift，那么就可以把Gift的导入放到最后
 # 之后，再调用要使用Wish的方法时，此模块已经执行完成，Gift已经被导入

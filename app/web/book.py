@@ -46,7 +46,7 @@ def book_detail(isbn):
     wish_models = TradeInfo(wish_records)
     return render_template('book_detail.html',
                            book=book, wishes=wish_models, gifts=gift_models,
-                           in_wish_list=in_wish_list, in_gift_list=in_gift_list)
+                           has_in_wisher=in_wish_list, has_in_gifts=in_gift_list)
 
 
 @web.route('/test')

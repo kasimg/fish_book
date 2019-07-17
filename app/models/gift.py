@@ -60,6 +60,7 @@ class Gift(Base):
         yushu_book.search_by_isbn(self.isbn)
         return yushu_book.only_book
 
+
     # 对象表示一个礼物，具体
     # 类表示礼物这一概念，抽象
     @classmethod

@@ -17,7 +17,7 @@ class Drift(Base):
     __tablename__ = 'drift'
 
     def __init__(self):
-        self.pending = PendingStatus.waiting
+        self.pending = PendingStatus.Waiting
         super(Drift, self).__init__()
 
     id = Column(Integer, primary_key=True)
@@ -56,14 +56,14 @@ class Drift(Base):
     def pending(self, status):
         self._pending = status.value
 
-    def can_send_drift(self):
-        if self.beans < 1:
-            return False
-        given_count = Gift.query.filter_by(
-            uid=self.id, launched=True).count()
-        received_count = Drift.query.filter_by(
-            taker_id=self.id, pending=PendingStatus.Success).count()
-
-        return True if \
-            floor(given_count / 2) <= floor(received_count)\
-            else False
+    # def can_send_drift(self):
+    #     if self.beans < 1:
+    #         return False
+    #     given_count = Gift.query.filter_by(
+    #         uid=self.id, launched=True).count()
+    #     received_count = Drift.query.filter_by(
+    #         taker_id=self.id, pending=PendingStatus.Success).count()
+    #
+    #     return True if \
+    #         floor(given_count / 2) <= floor(received_count)\
+    #         else False

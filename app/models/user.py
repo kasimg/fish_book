@@ -1,17 +1,21 @@
 """
 Created by kasim on 2019/7/12 9:04
 """
+from math import floor
+
 from flask import current_app
 from sqlalchemy import Column, Integer, String, Boolean, Float
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 from app import login_manager
+from app.libs.enums import PendingStatus
 from app.libs.helper import is_isbn_or_key
 from app.models.base import Base, db
 
 from flask_login import UserMixin
 
+from app.models.drift import Drift
 from app.models.gift import Gift
 from app.models.wish import Wish
 from app.spider.yushu_book import YuShuBook
@@ -94,6 +98,28 @@ class User(UserMixin, Base):
             user = User.query.get(uid)  # 主键查询时可以简化操作，直接使用get
             user.password = new_password
         return True
+
+    def can_send_drift(self):
+        if self.beans < 1:
+            return False
+        given_count = Gift.query.filter_by(
+            uid=self.id, launched=True).count()
+        received_count = Drift.query.filter_by(
+            taker_id=self.id, pending=PendingStatus.Success).count()
+
+        return True if \
+            floor(given_count / 2) <= floor(received_count) \
+            else False
+
+    @property
+    def summary(self):
+        return dict(
+            nickname=self.nickname,
+            beans=self.beans,
+            eamil=self.email,
+            send_receive=str(self.send_counter) + '/' + str(self.receive_counter)
+        )
+
 @login_manager.user_loader
 def get_user(uid):
     """
